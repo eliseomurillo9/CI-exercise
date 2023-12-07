@@ -5,5 +5,6 @@ jobs:
     steps:
       - uses: actions/setup-python@v2
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      # NO need cache and I neet a path and a key
+      # - uses: actions/cache@v2
       - run: python main.py
