@@ -1,7 +1,23 @@
-print("Hello, world!")
+def fizzBuzz():
+    list = []
 
-def test_hello_world():
-    assert print("Hello, world!") == "Hello, world!"
+    for x in range(1, 101, 1):
+        list.append(x)
 
-if __name__ == "__main__":
-    test_hello_world()
+    new_list = []
+
+    for number in list:
+        if number % 3 == 0 and number % 5 == 0:
+            new_list.append('FizzBuzz')
+        elif number % 3 == 0:
+            new_list.append('Fizz')
+        elif number % 5 == 0:
+            new_list.append('Buzz')
+        else:
+            new_list.append(number)
+
+    return new_list
+
+
+if __name__ == '__main__':
+    print(fizzBuzz())
